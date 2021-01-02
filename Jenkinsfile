@@ -26,10 +26,10 @@ pipeline {
 
         stage('Code Checkout') {
             steps {
+                   sh """
+                   echo "Checking out Code"
+                    """
                 checkout([
-                    sh """
-                    echo "Checking out Code"
-                     """
                     $class: 'GitSCM', 
                     branches: [[name: '*/main']], 
                     userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
