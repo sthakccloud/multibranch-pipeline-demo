@@ -27,7 +27,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                    sh """
-                   echo "Checking out Code"
+                   echo "Checking out Code WH"
                     """
                 checkout([
                     $class: 'GitSCM', 
